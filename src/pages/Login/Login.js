@@ -1,25 +1,24 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Form, Input, Icon, Button } from 'antd';
+import Form from 'antd/lib/form';
+import Input from 'antd/lib/input';
+import Icon from 'antd/lib/icon';
+import Button from 'antd/lib/button';
+
 import './Login.css';
 
 const FormItem = Form.Item;
 
 class Login extends PureComponent {
   static propTypes = {
-    username: PropTypes.string,
-    password: PropTypes.string,
-    onChangeUsername: PropTypes.func,
-    onChangePassword: PropTypes.func,
     onClickLogin: PropTypes.func.isRequired
   };
 
-  static defaultProps = {
-    username: '',
-    password: '',
-    onChangeUsername: () => {},
-    onChangePassword: () => {}
-  };
+  constructor() {
+    super();
+    this._onChangeUsername = this._onChangeUsername.bind(this);
+    this._onChangePassword = this._onChangePassword.bind(this);
+  }
 
   render() {
     const { getFieldDecorator } = this.props.form;
@@ -33,9 +32,11 @@ class Login extends PureComponent {
               })(
                 <Input
                   prefix={<Icon type="user" />}
-                  value={this.props.username}
-                  onChange={this.props.onChangeUsername}
+                  onChange={this._onChangeUsername}
                   placeholder="Username"
+                  ref={input => {
+                    this.usernameInput = input;
+                  }}
                 />
               )}
             </FormItem>
@@ -45,10 +46,12 @@ class Login extends PureComponent {
               })(
                 <Input
                   prefix={<Icon type="lock" />}
-                  value={this.props.password}
-                  onChange={this.props.onChangePassword}
+                  onChange={this._onChangePassword}
                   type="password"
                   placeholder="Password"
+                  ref={input => {
+                    this.passwordInput = input;
+                  }}
                 />
               )}
             </FormItem>
@@ -56,7 +59,8 @@ class Login extends PureComponent {
               <Button
                 type="primary"
                 className="login-form-button"
-                onClick={this.props.onClickLogin}
+                onClick={() =>
+                  this.props.onClickLogin(this.usernameInput.value, this.passwordInput.value)}
               >
                 Log In
               </Button>
@@ -70,6 +74,14 @@ class Login extends PureComponent {
         </div>
       </div>
     );
+  }
+
+  _onChangeUsername(e) {
+    this.props.form.setFieldsValue({ username: e.target.value });
+  }
+
+  _onChangePassword(e) {
+    this.props.form.setFieldsValue({ password: e.target.value });
   }
 }
 
