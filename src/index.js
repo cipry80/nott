@@ -6,6 +6,7 @@ import PerfProfiler from './common/components/PerfProfiler/PerfProfiler';
 import AuthenticateRoute from './common/components/AuthenticateRoute/AuthenticateRoute';
 import LoginContainer from './pages/Login/LoginContainer';
 import Home from './pages/Home/Home';
+import Protected from './pages/Protected/Protected';
 import NotFound from './pages/NotFound/NotFound';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './index.css';
@@ -19,6 +20,7 @@ const Root = () =>
         <Switch>
           <Route exact path="/login" component={LoginContainer} />
           <AuthenticateRoute exact path="/" component={Home} />
+          <AuthenticateRoute exact path="/protected" component={Protected} />
           <Route component={NotFound} />
         </Switch>
       </main>
