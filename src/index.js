@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './redux/Store';
-import PerfProfiler from './common/components/PerfProfiler/PerfProfiler';
 import AuthenticateRoute from './common/components/AuthenticateRoute/AuthenticateRoute';
 import LoginContainer from './pages/Login/LoginContainer';
 import Home from './pages/Home/Home';
@@ -16,7 +15,6 @@ const Root = () =>
   <Provider store={store}>
     <Router>
       <main>
-        {/* process.env.NODE_ENV !== 'production' ? <PerfProfiler /> : null  */}
         <Switch>
           <Route exact path="/login" component={LoginContainer} />
           <AuthenticateRoute exact path="/" component={Home} />
