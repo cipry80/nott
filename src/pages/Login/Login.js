@@ -34,9 +34,6 @@ class Login extends PureComponent {
                   prefix={<Icon type="user" />}
                   onChange={this._onChangeUsername}
                   placeholder="Username"
-                  ref={input => {
-                    this.usernameInput = input;
-                  }}
                 />
               )}
             </FormItem>
@@ -49,9 +46,6 @@ class Login extends PureComponent {
                   onChange={this._onChangePassword}
                   type="password"
                   placeholder="Password"
-                  ref={input => {
-                    this.passwordInput = input;
-                  }}
                 />
               )}
             </FormItem>
@@ -59,8 +53,14 @@ class Login extends PureComponent {
               <Button
                 type="primary"
                 className="login-form-button"
-                onClick={() =>
-                  this.props.onClickLogin(this.usernameInput.value, this.passwordInput.value)}
+                onClick={() => {
+                  this.props.form.validateFields((err, values) => {
+                    if (!err) {
+                      const { username, password } = values;
+                      this.props.onClickLogin(username, password);
+                    }
+                  });
+                }}
               >
                 Log In
               </Button>
