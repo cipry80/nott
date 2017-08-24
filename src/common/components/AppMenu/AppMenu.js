@@ -6,6 +6,7 @@ import './AppMenu.css';
 
 const determineKeys = location => {
   const { pathname } = location;
+
   if (pathname === '/') {
     return ['home'];
   }
@@ -18,7 +19,11 @@ class AppHeader extends PureComponent {
     const { location } = this.props;
 
     return (
-      <Menu selectedKeys={determineKeys(location)} className="app-menu" mode="horizontal">
+      <Menu
+        selectedKeys={determineKeys(location)}
+        className="app-menu"
+        mode="horizontal"
+      >
         <Menu.Item key="home">
           <Link to="/">Home</Link>
         </Menu.Item>

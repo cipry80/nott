@@ -14,21 +14,21 @@ class Login extends PureComponent {
     onClickLogin: PropTypes.func.isRequired
   };
 
-  constructor() {
-    super();
-    this._onChangeUsername = this._onChangeUsername.bind(this);
-    this._onChangePassword = this._onChangePassword.bind(this);
-  }
-
   render() {
     const { getFieldDecorator } = this.props.form;
+
     return (
       <div className="page page-login">
         <div className="page__content page-login__content u-fx u-fx-align-center u-fx-justify-center">
           <Form className="login-form">
             <FormItem>
               {getFieldDecorator('username', {
-                rules: [{ required: true, message: 'Please input your username!' }]
+                rules: [
+                  {
+                    required: true,
+                    message: 'Please input your username!'
+                  }
+                ]
               })(
                 <Input
                   prefix={<Icon type="user" />}
@@ -39,7 +39,12 @@ class Login extends PureComponent {
             </FormItem>
             <FormItem>
               {getFieldDecorator('password', {
-                rules: [{ required: true, message: 'Please input your password!' }]
+                rules: [
+                  {
+                    required: true,
+                    message: 'Please input your password!'
+                  }
+                ]
               })(
                 <Input
                   prefix={<Icon type="lock" />}
@@ -76,13 +81,17 @@ class Login extends PureComponent {
     );
   }
 
-  _onChangeUsername(e) {
-    this.props.form.setFieldsValue({ username: e.target.value });
-  }
+  _onChangeUsername = e => {
+    this.props.form.setFieldsValue({
+      username: e.target.value
+    });
+  };
 
-  _onChangePassword(e) {
-    this.props.form.setFieldsValue({ password: e.target.value });
-  }
+  _onChangePassword = e => {
+    this.props.form.setFieldsValue({
+      password: e.target.value
+    });
+  };
 }
 
 export default Form.create()(Login);

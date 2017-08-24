@@ -11,5 +11,10 @@ export const getUserInfo = () => {
     return Promise.resolve(user);
   }
 };
-export const getUserInfoSuccess = user => ({ type: types.GET_USER_INFO_SUCCESS, user });
+
+export const getUserInfoSuccess = user => ({
+  type: types.GET_USER_INFO_SUCCESS,
+  user
+});
+
 export const clearUserInfo = () => ({ type: types.CLEAR_USER_INFO });

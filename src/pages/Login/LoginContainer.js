@@ -1,37 +1,34 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { doLogin } from './Login.actions';
-import { getUserInfo, getUserInfoSuccess } from '../../common/state/user/User.actions';
+import {
+  getUserInfo,
+  getUserInfoSuccess
+} from '../../common/state/user/User.actions';
 import Login from './Login';
 
 class LoginContainer extends Component {
-  constructor(props) {
-    super();
-    this._doLogin = this._doLogin.bind(this);
-  }
-
   render() {
     return <Login onClickLogin={this._doLogin} />;
   }
 
-  _doLogin(username, password) {
-    this.props._doLogin(username, password);
-  }
+  _doLogin = (username, password) => this.props._doLogin(username, password);
 }
-
-const mapStateToProps = () => ({});
 
 const mapDispatchToProps = (dispatch, props) => {
   return {
-    _doLogin: (username, password) => {
-      return doLogin(username, password)
-        .then(res => localStorage.setItem('token', res.body.token))
-        .then(() => getUserInfo())
-        .then(res => dispatch(getUserInfoSuccess(res.body)))
-        .then(() => props.history.push('/'))
-        .catch(err => console.log(err));
+    _doLogin: async (username, password) => {
+      try {
+        const res = await doLogin(username, password);
+        localStorage.setItem('token', res.body.token);
+        const user = await getUserInfo();
+        await dispatch(getUserInfoSuccess(user.body));
+        props.history.push('/');
+      } catch (e) {
+        console.log(e);
+      }
     }
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginContainer);
+export default connect(() => ({}), mapDispatchToProps)(LoginContainer);

@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import Page from '../../common/components/Page/Page';
 import './Protected.css';
 
-const Protected = () =>
-  <Page pageName="protected">
-    <p>This is the Protected page.</p>
-  </Page>;
+class Protected extends PureComponent {
+  render() {
+    return (
+      <Page pageName="protected">
+        <p>This is the Protected page.</p>
+      </Page>
+    );
+  }
+}
 
 export default Protected;
