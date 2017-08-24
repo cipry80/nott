@@ -11,7 +11,7 @@ class AppHeader extends PureComponent {
 
   render() {
     return (
-      <header className="app-header u-fx u-fx-align-center u-fx-space-between u-ph-full">
+      <header className="app-header u-fx u-fx-align-center u-fx-justify-space-between u-ph-full">
         <AppMenu />
         <Button
           onClick={this.props.onClickLogout}

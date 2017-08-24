@@ -444,11 +444,11 @@ textarea {
   justify-content: center;
 }
 
-.u-fx-space-between {
+.u-fx-justify-space-between {
   justify-content: space-between;
 }
 
-.u-fx-space-around {
+.u-fx-justify-space-around {
   justify-content: space-around;
 }
 

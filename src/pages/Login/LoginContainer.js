@@ -15,20 +15,18 @@ class LoginContainer extends Component {
   _doLogin = (username, password) => this.props._doLogin(username, password);
 }
 
-const mapDispatchToProps = (dispatch, props) => {
-  return {
-    _doLogin: async (username, password) => {
-      try {
-        const res = await doLogin(username, password);
-        localStorage.setItem('token', res.body.token);
-        const user = await getUserInfo();
-        await dispatch(getUserInfoSuccess(user.body));
-        props.history.push('/');
-      } catch (e) {
-        console.log(e);
-      }
+const mapDispatchToProps = (dispatch, props) => ({
+  _doLogin: async (username, password) => {
+    try {
+      const res = await doLogin(username, password);
+      localStorage.setItem('token', res.body.token);
+      const user = await getUserInfo();
+      await dispatch(getUserInfoSuccess(user.body));
+      props.history.push('/');
+    } catch (e) {
+      console.log(e);
     }
-  };
-};
+  }
+});
 
 export default connect(() => ({}), mapDispatchToProps)(LoginContainer);
