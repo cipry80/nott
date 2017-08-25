@@ -390,12 +390,28 @@ textarea {
   padding: 2rem !important;
 }
 
+.u-cf:after {
+  clear: both;
+}
+
+.u-fl {
+  float: left;
+}
+
+.u-fr {
+  float: right;
+}
+
 .u-center {
   text-align: center;
 }
 
 .u-bold {
   font-weight: bold;
+}
+
+.u-italic {
+  font-style: italic;
 }
 
 .u-uppercase {
@@ -440,6 +456,14 @@ textarea {
   align-items: center;
 }
 
+.u-fx-align-start {
+  align-items: flex-start;
+}
+
+.u-fx-align-end {
+  align-items: flex-end;
+}
+
 .u-fx-justify-center {
   justify-content: center;
 }
@@ -450,6 +474,14 @@ textarea {
 
 .u-fx-justify-space-around {
   justify-content: space-around;
+}
+
+.u-fx-justify-start {
+  justify-content: flex-start;
+}
+
+.u-fx-justify-end {
+  justify-content: flex-end;
 }
 
 html,
