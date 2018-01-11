@@ -1,7 +1,5 @@
-﻿export const doLogin = (username, password) => {
-  // Placeholder functionality
-  return new Promise((resolve, reject) => {
+﻿export const doLogin = (username, password) =>
+  new Promise(res => {
     const body = { token: '123' };
-    setTimeout(() => resolve({ body }), 1000);
+    setTimeout(() => res({ body }), 1000);
   });
-};

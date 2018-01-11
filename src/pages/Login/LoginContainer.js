@@ -8,9 +8,7 @@ import {
 import Login from './Login';
 
 class LoginContainer extends Component {
-  render() {
-    return <Login onClickLogin={this._doLogin} />;
-  }
+  render = () => <Login onClickLogin={this._doLogin} />;
 
   _doLogin = (username, password) => this.props._doLogin(username, password);
 }

@@ -14,7 +14,7 @@ class Login extends PureComponent {
     onClickLogin: PropTypes.func.isRequired
   };
 
-  render() {
+  render = () => {
     const { getFieldDecorator } = this.props.form;
 
     return (
@@ -79,19 +79,17 @@ class Login extends PureComponent {
         </div>
       </div>
     );
-  }
+  };
 
-  _onChangeUsername = e => {
+  _onChangeUsername = e =>
     this.props.form.setFieldsValue({
       username: e.target.value
     });
-  };
 
-  _onChangePassword = e => {
+  _onChangePassword = e =>
     this.props.form.setFieldsValue({
       password: e.target.value
     });
-  };
 }
 
 export default Form.create()(Login);
