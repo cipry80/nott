@@ -15,24 +15,20 @@ const determineKeys = location => {
 };
 
 class AppHeader extends PureComponent {
-  render() {
-    const { location } = this.props;
-
-    return (
-      <Menu
-        selectedKeys={determineKeys(location)}
-        className="app-menu"
-        mode="horizontal"
-      >
-        <Menu.Item key="home">
-          <Link to="/">Home</Link>
-        </Menu.Item>
-        <Menu.Item key="protected">
-          <Link to="/protected">Protected</Link>
-        </Menu.Item>
-      </Menu>
-    );
-  }
+  render = () => (
+    <Menu
+      selectedKeys={determineKeys(this.props.location)}
+      className="app-menu"
+      mode="horizontal"
+    >
+      <Menu.Item key="home">
+        <Link to="/">Home</Link>
+      </Menu.Item>
+      <Menu.Item key="protected">
+        <Link to="/protected">Protected</Link>
+      </Menu.Item>
+    </Menu>
+  );
 }
 
 export default withRouter(AppHeader);

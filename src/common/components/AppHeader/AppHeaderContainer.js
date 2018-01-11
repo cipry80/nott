@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { doLogout } from './AppHeader.actions';
 import AppHeader from './AppHeader';
 
-class AppHeaderContainer extends Component {
-  render() {
-    return <AppHeader onClickLogout={this.props._doLogout} />;
-  }
+class AppHeaderContainer extends PureComponent {
+  render = () => <AppHeader onClickLogout={this.props._doLogout} />;
 }
 
 const mapDispatchToProps = (dispatch, props) => ({
@@ -23,5 +21,5 @@ const mapDispatchToProps = (dispatch, props) => ({
 });
 
 export default withRouter(
-  connect(() => ({}), mapDispatchToProps)(AppHeaderContainer)
+  connect(null, mapDispatchToProps)(AppHeaderContainer)
 );

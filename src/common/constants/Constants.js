@@ -1,4 +1,4 @@
-﻿// Base URL can be something like 'http://localhost:4000'
+﻿// Base URL can be something like 'http://localhost:3000'
 const API_BASE_URL = '';
 
 const Constants = {};

@@ -1,6 +1,1 @@
-export const doLogout = () => {
-  // Placeholder functionality
-  return new Promise((resolve, reject) => {
-    setTimeout(() => resolve(), 1000);
-  });
-};
+export const doLogout = () => new Promise(res => setTimeout(() => res(), 1000));

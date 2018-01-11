@@ -34,7 +34,7 @@ q {
 }
 
 q::before {
-  content: "";
+  content: '';
 }
 
 table {
@@ -96,7 +96,7 @@ h5 {
 }
 
 h6 {
-  font-size: .875rem;
+  font-size: 0.875rem;
 }
 
 img {
@@ -126,9 +126,9 @@ select {
 }
 
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
   -webkit-appearance: button;
   cursor: pointer;
 }
@@ -181,33 +181,33 @@ textarea {
 }
 
 .u-mt-half {
-  margin-top: .5rem !important;
+  margin-top: 0.5rem !important;
 }
 
 .u-mb-half {
-  margin-bottom: .5rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
 .u-ml-half {
-  margin-left: .5rem !important;
+  margin-left: 0.5rem !important;
 }
 
 .u-mr-half {
-  margin-right: .5rem !important;
+  margin-right: 0.5rem !important;
 }
 
 .u-mv-half {
-  margin-top: .5rem !important;
-  margin-bottom: .5rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
 .u-mh-half {
-  margin-left: .5rem !important;
-  margin-right: .5rem !important;
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
 }
 
 .u-ma-half {
-  margin: .5rem !important;
+  margin: 0.5rem !important;
 }
 
 .u-mt-full {
@@ -301,33 +301,33 @@ textarea {
 }
 
 .u-pt-half {
-  padding-top: .5rem !important;
+  padding-top: 0.5rem !important;
 }
 
 .u-pb-half {
-  padding-bottom: .5rem !important;
+  padding-bottom: 0.5rem !important;
 }
 
 .u-pl-half {
-  padding-left: .5rem !important;
+  padding-left: 0.5rem !important;
 }
 
 .u-pr-half {
-  padding-right: .5rem !important;
+  padding-right: 0.5rem !important;
 }
 
 .u-pv-half {
-  padding-top: .5rem !important;
-  padding-bottom: .5rem !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
 }
 
 .u-ph-half {
-  padding-left: .5rem !important;
-  padding-right: .5rem !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
 }
 
 .u-pa-half {
-  padding: .5rem !important;
+  padding: 0.5rem !important;
 }
 
 .u-pt-full {

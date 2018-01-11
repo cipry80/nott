@@ -12,19 +12,18 @@ class Page extends PureComponent {
     pageName: 'unknown'
   };
 
-  render() {
-    return (
-      <div className={`page page-${this.props.pageName}`}>
-        <AppHeaderContainer />
-        <div
-          className={`page__content page-${this.props
-            .pageName}__content u-pa-full`}
-        >
-          {this.props.children}
-        </div>
+  render = () => (
+    <div className={`page page-${this.props.pageName}`}>
+      <AppHeaderContainer />
+      <div
+        className={`page__content page-${
+          this.props.pageName
+        }__content u-pa-full`}
+      >
+        {this.props.children}
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default Page;

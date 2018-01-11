@@ -9,20 +9,18 @@ class AppHeader extends PureComponent {
     onClickLogout: PropTypes.func.isRequired
   };
 
-  render() {
-    return (
-      <header className="app-header u-fx u-fx-align-center u-fx-justify-space-between u-ph-full">
-        <AppMenu />
-        <Button
-          onClick={this.props.onClickLogout}
-          type="primary"
-          shape="circle"
-          size={'small'}
-          icon="logout"
-        />
-      </header>
-    );
-  }
+  render = () => (
+    <header className="app-header u-fx u-fx-align-center u-fx-justify-space-between u-ph-full">
+      <AppMenu />
+      <Button
+        onClick={this.props.onClickLogout}
+        type="primary"
+        shape="circle"
+        size="small"
+        icon="logout"
+      />
+    </header>
+  );
 }
 
 export default AppHeader;

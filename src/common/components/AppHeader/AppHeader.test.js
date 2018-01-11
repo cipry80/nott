@@ -3,5 +3,5 @@ import { shallow } from 'enzyme';
 import AppHeader from './AppHeader';
 
 it('Renders without crashing', () => {
-  shallow(<AppHeader />);
+  shallow(<AppHeader onClickLogout={() => {}} />);
 });

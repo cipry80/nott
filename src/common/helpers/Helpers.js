@@ -25,8 +25,7 @@ noData.forEach(el => {
       defaultHeaders['Authorization'] = `Bearer ${token}`;
     }
 
-    return request
-      [el](url)
+    return request[el](url)
       .use(unauthorizedRequest)
       .set(Object.assign({}, defaultHeaders, headers));
   };
@@ -43,8 +42,7 @@ data.forEach(el => {
       defaultHeaders['Authorization'] = `Bearer ${token}`;
     }
 
-    return request
-      [el](url)
+    return request[el](url)
       .use(unauthorizedRequest)
       .set(Object.assign({}, defaultHeaders, headers))
       .send(data);
