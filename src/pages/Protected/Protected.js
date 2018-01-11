@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import Page from '../../common/components/Page/Page';
+import Page from 'common/components/Page/Page';
 import './Protected.css';
 
 class Protected extends PureComponent {

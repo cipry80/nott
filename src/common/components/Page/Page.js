@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import AppHeaderContainer from '../AppHeader/AppHeaderContainer';
+import AppHeaderContainer from 'common/components/AppHeader/AppHeaderContainer';
 import './Page.css';
 
 class Page extends PureComponent {

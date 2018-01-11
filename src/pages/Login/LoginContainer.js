@@ -4,7 +4,7 @@ import { doLogin } from './Login.actions';
 import {
   getUserInfo,
   getUserInfoSuccess
-} from '../../common/state/user/User.actions';
+} from 'common/state/user/User.actions';
 import Login from './Login';
 
 class LoginContainer extends Component {

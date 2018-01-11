@@ -1,6 +1,6 @@
 ﻿import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import AppMenu from '../AppMenu/AppMenu';
+import AppMenu from 'common/components/AppMenu/AppMenu';
 import Button from 'antd/lib/button';
 import './AppHeader.css';
 

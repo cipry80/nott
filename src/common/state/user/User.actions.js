@@ -1,6 +1,6 @@
 ﻿import * as types from './User.types';
-import Helpers from '../../../common/helpers/Helpers';
-import Store from '../../../redux/Store';
+import Helpers from 'common/helpers/Helpers';
+import Store from 'redux/Store';
 
 export const getUserInfo = () => {
   const { user } = Store.getState();
