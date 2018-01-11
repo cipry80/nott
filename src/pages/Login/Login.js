@@ -20,7 +20,7 @@ class Login extends PureComponent {
     return (
       <div className="page page-login">
         <div className="page__content page-login__content u-fx u-fx-align-center u-fx-justify-center">
-          <Form className="login-form">
+          <Form className="login-form" onKeyUp={this._onKeyUp}>
             <FormItem>
               {getFieldDecorator('username', {
                 rules: [
@@ -58,14 +58,7 @@ class Login extends PureComponent {
               <Button
                 type="primary"
                 className="login-form-button"
-                onClick={() => {
-                  this.props.form.validateFields((err, values) => {
-                    if (!err) {
-                      const { username, password } = values;
-                      this.props.onClickLogin(username, password);
-                    }
-                  });
-                }}
+                onClick={this._onClick}
               >
                 Log In
               </Button>
@@ -81,6 +74,16 @@ class Login extends PureComponent {
     );
   };
 
+  _validateAndLogin = () =>
+    this.props.form.validateFields((err, values) => {
+      if (!err) {
+        const { username, password } = values;
+        this.props.onClickLogin(username, password);
+      }
+    });
+
+  _onKeyUp = e => e.keyCode === 13 && this._validateAndLogin();
+
   _onChangeUsername = e =>
     this.props.form.setFieldsValue({
       username: e.target.value
@@ -90,6 +93,8 @@ class Login extends PureComponent {
     this.props.form.setFieldsValue({
       password: e.target.value
     });
+
+  _onClick = () => this._validateAndLogin();
 }
 
 export default Form.create()(Login);
