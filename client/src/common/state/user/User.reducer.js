@@ -1,6 +1,6 @@
 ﻿import * as types from './User.types';
 
-const initialState = null;
+const initialState = null; 
 
 const user = (state = initialState, action) => {
   switch (action.type) {
