@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "morgan-toolkit": "^1.2.2"
+  },
+  "scripts": {
+    "start": "./node_modules/nodemon/bin/nodemon.js app.js || node app.js"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  }
+}
