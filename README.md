@@ -23,5 +23,4 @@ A starter for React applications. Based on CRA + Node (Express REST APIs) backen
 3. To discuss on client side:
   - https://github.com/thejameskyle/react-loadable
   - https://github.com/maisano/react-router-transition
-  - https://github.com/yomete/advanced-react-router-usage/blob/scroll-restoration/src/components/ScrollToTop/ScrollToTop.js
   - https://nemethgergely.com/puppeteer-browser-automation/ 
