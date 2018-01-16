@@ -4,12 +4,12 @@ A starter for React applications. Based on CRA + Node (Express REST APIs) backen
 
 #### How to start
 
-1. Run `npm i` in root folder
-2. `cd` in `server` folder and run `npm i`
-3. `cd` in `client` folder and run `npm i`
-4. Start the app by running `npm start` in root folder
-5. You can run only the server with `npm run start:server` in root folder or `npm start` in `server` folder
-6. You can run only the the client with `npm run start:client` in root folder or `npm start` in `client` folder
+1. Run `npm i` or `yarn install` in root folder
+2. `cd` in `server` folder and run `npm i` or `yarn install` 
+3. `cd` in `client` folder and run `npm i` or `yarn install`
+4. Start the app by running `npm start` or `yarn install` in root folder
+5. You can run only the server with `npm run start:server` (or `yarn run start:client`) in root folder or `npm start` (or `yarn start`) in `server` folder
+6. You can run only the the client with `npm run start:client` (or `yarn run start:client`) in root folder or `npm start` (or `yarn start`) in `client` folder
 
 #### Needs
 
