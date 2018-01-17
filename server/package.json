@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "./node_modules/nodemon/bin/nodemon.js app.js",
-    "sequelize": "./node_modules/sequelize-cli/lib/sequelize --config ./config/config.js"
+    "sequelize": "./node_modules/sequelize-cli/lib/sequelize"
   },
   "devDependencies": {
     "nodemon": "^1.14.11",
