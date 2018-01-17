@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "body-parser": "^1.18.2",
+    "crypto": "^1.0.1",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "morgan": "^1.9.0",
@@ -10,11 +11,11 @@
   },
   "scripts": {
     "start": "./node_modules/nodemon/bin/nodemon.js app.js",
-    "sequelize":
-      "./node_modules/sequelize-cli/lib/sequelize --config ./config/config.js"
+    "sequelize": "./node_modules/sequelize-cli/lib/sequelize --config ./config/config.js"
   },
   "devDependencies": {
     "nodemon": "^1.14.11",
+    "repl": "^0.1.3",
     "sequelize-cli": "^3.2.0"
   }
 }
