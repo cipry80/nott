@@ -11,7 +11,7 @@ A starter for React applications. Based on CRA + Node (Express REST APIs) backen
 5. You can run only the server with `npm run start:server` (or `yarn run start:client`) in root folder or `npm start` (or `yarn start`) in `server` folder
 6. You can run only the the client with `npm run start:client` (or `yarn run start:client`) in root folder or `npm start` (or `yarn start`) in `client` folder
 
-_Important info:_ make sure you create a `.env` file in the root of the `server` folder by using the `.env_template` file. This will act as the centralised list for all ENV variables.
+**Important info:** make sure you create a `.env` file in the root of the `server` folder by using the `.env_template` file. This will act as the centralised list for all ENV variables.
 
 #### Working with Sequelize CLI
 
