@@ -17,24 +17,24 @@ _Important info:_ make sure you create a `.env` file in the root of the `server`
 
 You can chose to install `sequelize-cli` globally or keep the local instalation provided by `package.json`. If you install `sequelize-cli` globally (e.g.: `npm i -g sequelize-cli`), you will be able to run all Sequelize related commands (e.g.: migrations) like so:
 
-    `sequelize db:migrate`
+    sequelize db:migrate
 
 If you prefer local installation (does not pollute the system), use the following command:
 
-    `npm run sequelize db:migrate`
+    npm run sequelize db:migrate
 
 If you need to pass arguments to the local instalation of `sequelize-cli` (e.g.: creating a new model), make sure to prefix all commands with '--'. E.g.:
 
-    `npm run sequelize -- model:create --name User --attributes "first_name:string last_name:string"`
+    npm run sequelize -- model:create --name User --attributes "first_name:string last_name:string"
 
 #### Database connections
 
-_Postgres_
+**Postgres**
 
 1. Make sure you have `postgres` installed. OSX users can simply do that via `brew install postgres`.
 2. Fill in the database related ENV variables with the right info.
 3. Start Postgres server: `postgres -D /usr/local/var/postgres` (you can alias this)
-4. Run `npm run sequelize db:migrate` or `sequelize db:migrate` if you have `sequelize-cli` installed globally (check [Working with Sequelize CLI]() section above).
+4. Run `npm run sequelize db:migrate` or `sequelize db:migrate` if you have `sequelize-cli` installed globally (check [Working with Sequelize CLI](https://github.com/r31gN/nott/tree/db_postgres_sequelize#working-with-sequelize-cli) section above).
 
 #### Needs
 
