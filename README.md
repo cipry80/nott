@@ -15,7 +15,7 @@ A starter for React applications. Based on CRA + Node (Express REST APIs) backen
 
 #### Working with Sequelize CLI
 
-You can chose to install `sequelize-cli` globally or keep the local instalation provided by `package.json`. If you install `sequelize-cli` globally (e.g.: `npm i -g sequelize-cli`), you will be able to run all Sequelize related commands (e.g.: migrations) like so:
+You can choose to install `sequelize-cli` globally or keep the local instalation provided by `package.json`. If you install `sequelize-cli` globally (e.g.: `npm i -g sequelize-cli`), you will be able to run all Sequelize related commands (e.g.: migrations) like so:
 
     sequelize db:migrate
 
