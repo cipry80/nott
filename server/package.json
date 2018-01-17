@@ -4,7 +4,8 @@
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "morgan": "^1.9.0",
-    "morgan-toolkit": "^1.2.2"
+    "morgan-toolkit": "^1.2.2",
+    "sequelize": "^4.31.2"
   },
   "scripts": {
     "start": "./node_modules/nodemon/bin/nodemon.js app.js || node app.js"
