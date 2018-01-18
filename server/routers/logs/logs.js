@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const express = require('express');
 const router = express.Router();
 
@@ -20,7 +21,7 @@ router.post('/report-csp-violation', (req, res) => {
     
     
     `;
-    fs.appendFileSync('logs.txt', data);
+    fs.appendFileSync(path.join(__dirname, '/logs/csp.txt'), data);
   } catch (err) {
     console.log(err);
   }
