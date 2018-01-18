@@ -1,15 +1,21 @@
 {
   "dependencies": {
     "body-parser": "^1.18.2",
+    "crypto": "^1.0.1",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "morgan": "^1.9.0",
-    "morgan-toolkit": "^1.2.2"
+    "morgan-toolkit": "^1.2.2",
+    "pg": "^7.4.1",
+    "sequelize": "^4.31.2"
   },
   "scripts": {
-    "start": "./node_modules/nodemon/bin/nodemon.js app.js || node app.js"
+    "start": "./node_modules/nodemon/bin/nodemon.js app.js",
+    "sequelize": "./node_modules/sequelize-cli/lib/sequelize"
   },
   "devDependencies": {
-    "nodemon": "^1.14.11"
+    "nodemon": "^1.14.11",
+    "repl": "^0.1.3",
+    "sequelize-cli": "^3.2.0"
   }
 }
