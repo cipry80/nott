@@ -25,6 +25,8 @@ const morgan = require('morgan');
 const morganToolkit = require('morgan-toolkit')(morgan);
 app.use(morganToolkit());
 
+const logs = require('./routers/logs/logs');
+app.use('/logs', logs);
 app.use('*', (req, res) => res.end());
 
 const port = 4000;
