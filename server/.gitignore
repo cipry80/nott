@@ -5,5 +5,8 @@ node_modules
 # dependencies
 /node_modules
 
+# logs
+/logs/csp.txt
+
 # misc
 npm-debug.log*

@@ -1,47 +1,41 @@
 const express = require('express');
+const helmet = require('helmet');
 const app = express();
 
-// ----------------------------------------
-// ENV
-// ----------------------------------------
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
-// ----------------------------------------
-// Body Parser
-// ----------------------------------------
+app.use(helmet());
+// Add `CSP` and `referrerPolicy` manually (they are not included in Helmet's initial bundle)
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"]
+    }
+  })
+);
+app.use(helmet.referrerPolicy());
+
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// ----------------------------------------
-// Logging
-// ----------------------------------------
 const morgan = require('morgan');
 const morganToolkit = require('morgan-toolkit')(morgan);
 app.use(morganToolkit());
 
-// ----------------------------------------
-// Routes
-// ----------------------------------------
+const logs = require('./routers/logs/logs');
+app.use('/logs', logs);
 app.use('*', (req, res) => res.end());
 
-// ----------------------------------------
-// Server
-// ----------------------------------------
 const port = 4000;
 const host = 'localhost';
-const args = process.env.NODE_ENV === 'production' ?
-  [port] :
-  [port, host];
+const args = process.env.NODE_ENV === 'production' ? [port] : [port, host];
 
 app.listen.apply(app, args);
-console.log(`Listening: http://${ host }:${ port }\n`);
+console.log(`Listening: http://${host}:${port}\n`);
 
-// ----------------------------------------
-// Error Handling
-// ----------------------------------------
 app.use((err, req, res, next) => {
   if (res.headersSent) {
     return next(err);
@@ -51,11 +45,5 @@ app.use((err, req, res, next) => {
     err = err.stack;
   }
 
-  res.status(500).render('errors/500', { error: err });
+  res.json(err);
 });
-
-
-
-
-
-
