@@ -51,6 +51,5 @@ The starter has been built and tested on OS Sierra (10.12.6) using Node (9.3.0) 
 2. Discuss the need of linking MongoDB?
 3. To discuss on client side:
 
-* https://github.com/thejameskyle/react-loadable
 * https://github.com/maisano/react-router-transition
 * https://nemethgergely.com/puppeteer-browser-automation/
