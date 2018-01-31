@@ -34,7 +34,8 @@ If you need to pass arguments to the local instalation of `sequelize-cli` (e.g.:
 1. Make sure you have `postgres` installed. OSX users can simply do that via `brew install postgres`.
 2. Fill in the database related ENV variables with the right info.
 3. Start Postgres server: `postgres -D /usr/local/var/postgres` (you can alias this)
-4. Run `npm run sequelize db:migrate` or `sequelize db:migrate` if you have `sequelize-cli` installed globally (check [Working with Sequelize CLI](https://github.com/r31gN/nott/tree/db_postgres_sequelize#working-with-sequelize-cli) section above).
+4. Cd in `server` folder and run `npm run sequelize db:migrate` or `sequelize db:migrate` if you have `sequelize-cli` installed globally (check [Working with Sequelize CLI](https://github.com/r31gN/nott/tree/db_postgres_sequelize#working-with-sequelize-cli) section above).
+5. Seed your DB by running `npm run sequelize db:seed:all` or `sequelize db:seed:all` if you have `sequelize-cli` installed globally
 
 ## Needs
 
@@ -43,7 +44,7 @@ If you need to pass arguments to the local instalation of `sequelize-cli` (e.g.:
 ## Ideas to include/not to include
 
 1. GraphQL backend
-2. Link a DB. Maybe a combination of PostgreSQL + Mongo? (use ORMs - Sequelize + Mongoose)
+2. Discuss the need of linking MongoDB?
 3. To discuss on client side:
 
 * https://github.com/thejameskyle/react-loadable
