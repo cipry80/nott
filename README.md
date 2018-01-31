@@ -41,6 +41,10 @@ If you need to pass arguments to the local instalation of `sequelize-cli` (e.g.:
 
 1. Make sure you install `watchman` (can fail on OSX) - `brew install watchman` (see more details [here](https://github.com/facebookincubator/create-react-app/issues/871)).
 
+## Compatibility
+
+The starter has been built and tested on OS Sierra (10.12.6) using Node (9.3.0) and PostgreSQL (10.1). All instructions are OS X compatible. This software has not been tested on Linux/Windows yet, so please consider finding alternative instructions on your own if you do wish to use `nott` on these platforms.
+
 ## Ideas to include/not to include
 
 1. GraphQL backend
